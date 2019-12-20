@@ -35,25 +35,32 @@ class Lain extends React.Component {
 
   render() {
     const { isLoading, users } = this.state;
+    console.log(users);
     return (
       <React.Fragment>
         <h2>Random User</h2>
         <p>Ini di dapat dari &nbsp; Random User API</p>
         <div>
           {!isLoading ? (
-            users.map(user => {
-              const { username, name, email, image } = user;
-              return (
-                <div key={username} className='content-title'>
-                  <div>
+            users.length !== 0 ? (
+              users.map(user => {
+                const { username, name, email, image } = user;
+                return (
+                  <div key={username} className='peoples'>
                     <img src={image} alt={name} />
-                    <p>{name}</p>
+                    <div className='person'>
+                      <p className='nama'>{name}</p>
+                      <p className='email'>{email}</p>
+                    </div>
+                    <hr />
                   </div>
-                  <p>{email}</p>
-                  <hr />
-                </div>
-              );
-            })
+                );
+              })
+            ) : (
+              <center>
+                <h1>Error 502, Bad Gateay. Gak dapat data..</h1>
+              </center>
+            )
           ) : (
             <p>Loading...</p>
           )}

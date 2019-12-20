@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
 
 class Berita extends React.Component {
   state = {
@@ -20,7 +19,9 @@ class Berita extends React.Component {
             name: `${user.source.name}`,
             title: `${user.title}`,
             description: `${user.description}`,
-            content: `${user.content}`
+            content: `${user.content}`,
+            image: `${user.urlToImage}`,
+            create: `${user.publishedAt}`
           })
           //   {
           //     console.log(response.data.articles);
@@ -48,21 +49,32 @@ class Berita extends React.Component {
     const { isLoading, datas } = this.state;
     return (
       <React.Fragment>
-        <div className='container'>
-          <h2>News Portal</h2>
-
+        <div>
+          <center>
+            <h2>News Portal</h2>
+          </center>
           <div>
             {!isLoading ? (
               datas.map(data => {
-                const { name, title, description, content } = data;
+                const {
+                  name,
+                  title,
+                  description,
+                  image,
+                  content,
+                  create
+                } = data;
+
                 return (
-                  <div key={name}>
-                    <h2>{title}</h2>
-                    <h3>{name}</h3>
-                    <div>
-                      <h3>{description}</h3>
+                  <div key={data.title} className='container'>
+                    <img src={image} alt='images' />
+                    <div className='content-detail'>
+                      <h2 className='title'>{title}</h2>
+                      <h3 className='desc'>{description}</h3>
+                      <h4 className='content-name'>{name}</h4>
+                      <span>{create}</span>
+                      <p className='content'>{content}</p>
                     </div>
-                    <p>{content}</p>
                   </div>
                 );
               })

@@ -3,6 +3,10 @@
     padding: 30px;
 }
 
+.menu {
+    margin-left: 390px;
+}
+
 .navigation a {
     padding: 10px 40px;
     margin: 10px;
@@ -17,12 +21,98 @@ h2.content-title {
     font-size: 30px;
 }
 
-ul {
+.center {
     text-align: center;
     text-decoration: none;
 }
 
 .center {
     text-align: center;
+    list-style-type: none;
+}
+
+/* ini page Portal */
+
+.container {
+    border-radius: 10px;
+    margin: auto;
+    width: 1150px;
+    min-height: 330px;
+    background-color: aqua;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+}
+
+img {
+    width: 545px;
+    height: 305px;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+    margin: 10px 10px 10px 10px;
+}
+
+.content-detail {
+    margin: 10px 10px 10px 10px;
+}
+
+h2.title {
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.content-name {
+    font-size: medium;
+    text-align: justify;
+    margin-bottom: -5px;
+}
+
+.desc {
+    font-size: large;
+}
+
+span {
+    font-size: 12px;
+    color: blue;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+p {
+    text-align: justify;
+}
+
+/* page Lain */
+.peoples {
+    background-color: cornflowerblue;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 225px;
+    height: 275px;
+    border-radius: 10px;
+}
+
+
+.person {
+    text-align: center;
+}
+
+.nama {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0px;
+    margin-top: 10px;
+    color: #2d2d2d;
+}
+
+.email {
+    font-size: 12px;
     text-decoration: none;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0px;
+    margin-top: 10px;
+    color: #918d8d;
 }

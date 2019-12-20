@@ -30,8 +30,7 @@ class App extends Component {
           <ul>
             {items.map((item, index) => <li key={index}>{item.name}</li> )}
           </ul>
-          <br/><br/>
-          <hr/>
+          <br/>
       </div>
     </div>;
   }
