@@ -1,0 +1,28 @@
+.navigation {
+    background: blue;
+    padding: 30px;
+}
+
+.navigation a {
+    padding: 10px 40px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    background: orangered;
+    border-radius: 5px;
+}
+
+h2.content-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+ul {
+    text-align: center;
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+    text-decoration: none;
+}
