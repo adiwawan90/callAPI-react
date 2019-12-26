@@ -43,10 +43,19 @@ h2.content-title {
 }
 
 img {
-    width: 545px;
-    height: 305px;
+    width: 310px;
+    height: 310px;
     float: left;
-    border-radius: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+    margin: 10px 10px 10px 10px;
+}
+
+img.img-rend {
+    width: 205px;
+    height: 205px;
+    float: left;
+    border-radius: 50%;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
     margin: 10px 10px 10px 10px;
 }
@@ -91,6 +100,7 @@ p {
     width: 225px;
     height: 275px;
     border-radius: 10px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -101,6 +111,7 @@ p {
 .nama {
     font-size: 14px;
     font-weight: 600;
+    text-align: center;
     text-transform: capitalize;
     margin: 0px;
     margin-top: 10px;
@@ -114,5 +125,13 @@ p {
     text-transform: capitalize;
     margin: 0px;
     margin-top: 10px;
-    color: #918d8d;
+    color: white;
+    text-align: center;
+}
+
+/* detail */
+.btn-info {
+    background-color: blue;
+    border-radius: 5px;
+    cursor: pointer;
 }

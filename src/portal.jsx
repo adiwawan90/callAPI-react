@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { Route, Link } from 'react-router-dom';
+import Detail from './DetailNews';
 
 class Berita extends React.Component {
   state = {
@@ -41,6 +43,8 @@ class Berita extends React.Component {
       .catch(error => this.setState({ error, isLoading: false }));
   }
 
+  goDetail;
+
   componentDidMount() {
     this.getDatas();
   }
@@ -74,6 +78,14 @@ class Berita extends React.Component {
                       <h4 className='content-name'>{name}</h4>
                       <span>{create}</span>
                       <p className='content'>{content}</p>
+                      <Link to='/detail-news'>
+                        <input
+                          type='button'
+                          value='Detail'
+                          className='btn btn-info'
+                        />
+                        <Detail key={data.title} datas={datas} />
+                      </Link>
                     </div>
                   </div>
                 );
@@ -83,6 +95,7 @@ class Berita extends React.Component {
             )}
           </div>
         </div>
+        <Route path='/detail-news' component={Detail} />
       </React.Fragment>
     );
   }

@@ -16,9 +16,11 @@ export default class Home extends React.Component {
     return (
       <BrowserRouter>
         <div className='navigation'>
-          <Link to='/'>Berita</Link>
-          <Link to='/lain'>JSONPlaceHolder</Link>
-          <Link to='/random'>Random</Link>
+          <div className='menu'>
+            <Link to='/'>Berita</Link>
+            <Link to='/lain'>JSONPlaceHolder</Link>
+            <Link to='/random'>Random</Link>
+          </div>
         </div>
         <Route path='/' exact component={Berita} />
         <Route path='/lain' component={App} />

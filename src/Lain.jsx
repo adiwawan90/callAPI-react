@@ -47,12 +47,11 @@ class Lain extends React.Component {
                 const { username, name, email, image } = user;
                 return (
                   <div key={username} className='peoples'>
-                    <img src={image} alt={name} />
+                    <img className='img-rend' src={image} alt={name} />
                     <div className='person'>
                       <p className='nama'>{name}</p>
                       <p className='email'>{email}</p>
                     </div>
-                    <hr />
                   </div>
                 );
               })
